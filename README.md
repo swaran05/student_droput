@@ -47,3 +47,41 @@ This project builds a predictive model to solve this problem.
 - Risk level (**Low / Medium / High**)  
 
 ---
+# 📂 Project Structure
+
+student_dropout/  
+│── README.md  
+│── data.csv  
+│── dropout.ipynb  
+│── requirements.txt  
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone the repository
+```bash
+git clone https://github.com/swaran05/student_dropout.git
+cd student_dropout
+2️⃣ Install dependencies
+pip install -r requirements.txt
+3️⃣ Run the notebook
+jupyter notebook
+▶️ Usage
+Open dropout.ipynb
+Run all cells
+Modify input values
+📌 Example Input
+[12, 14, 20, 0]
+📊 Results
+Model performs well on test data
+Handles class imbalance using SMOTE
+Provides probability-based predictions
+🚀 Future Improvements
+Add more features
+Try XGBoost / LightGBM
+Build Streamlit app
+Deploy online
+👨‍💻 Author
+
+Swaran Chandra

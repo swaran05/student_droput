@@ -47,34 +47,74 @@ This project builds a predictive model to solve this problem.
 - Risk level (**Low / Medium / High**)  
 
 ---
-# 📂 Project Structure
 
-student_dropout/  
-│── README.md  
-│── data.csv  
-│── dropout.ipynb  
-│── requirements.txt  
+## 📂 Project Structure
+
+student_dropout/
+│── README.md
+│── data.csv
+│── dropout.ipynb
+│── requirements.txt
+│── images/
+
 
 ---
-📊 Model Performance
 
-- Accuracy: 85%
-- Precision (Dropout): 0.87
-- Recall (Dropout): 0.80
-- F1-score: 0.83
+## ⚖️ Handling Imbalanced Data
 
-Confusion Matrix:
-[[416  48]
- [ 85 335]]
+### 🔹 Before SMOTE
+![Before SMOTE](images/before_smote.png)
 
-🔍 Insights:
-- Model performs well overall with balanced precision and recall.
-- Slightly lower recall indicates some dropout cases are missed.
-- Future improvements can focus on increasing recall to better identify at-risk students.
+### 🔹 After SMOTE
+![After SMOTE](images/after_smote.png)
 
-# ⚙️ Installation & Setup
+📌 **Insight:**  
+Dataset was imbalanced initially. SMOTE balanced both classes, improving model performance.
 
-## 1️⃣ Clone the repository
+---
+
+## 📊 Model Performance
+
+- Accuracy: **85%**  
+- Precision (Dropout): **0.85**  
+- Recall (Dropout): **0.84**  
+- F1-score: **0.84**  
+
+### 🔢 Confusion Matrix
+
+[[404 60]
+[ 69 351]]
+
+
+### 🔍 Insights
+- Model performs well with balanced performance  
+- Improved recall reduces missed dropout cases  
+- Suitable for real-world early intervention systems  
+
+---
+
+## 📊 Visualizations
+
+### 🔹 Feature Importance
+![Feature Importance](images/feature_importance.png)
+
+📌 Insight:
+- 2nd semester grades have highest impact  
+- Academic performance is key factor  
+
+---
+
+### 🔹 Dropout vs Grades
+![Dropout vs Grades](images/grades_boxplot.png)
+
+📌 Insight:
+- Lower grades are strongly associated with dropout  
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/swaran05/student_dropout.git
 cd student_dropout
@@ -88,10 +128,6 @@ Run all cells
 Modify input values
 📌 Example Input
 [12, 14, 20, 0]
-📊 Results
-Model performs well on test data
-Handles class imbalance using SMOTE
-Provides probability-based predictions
 🚀 Future Improvements
 Add more features
 Try XGBoost / LightGBM
